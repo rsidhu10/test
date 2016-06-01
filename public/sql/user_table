@@ -1,0 +1,6 @@
+ALTER TABLE `users` ADD `group` int(11) NOT NULL DEFAULT =1  AFTER `email`;
+
+ALTER TABLE `users` ADD `enabled` TINYINT(1) NOT NULL DEFAULT '1' AFTER `updated_at`;
+
+ALTER TABLE `users` ADD `verified` TINYINT(1) NOT NULL DEFAULT '0' AFTER `enabled`;
+ALTER TABLE `users` ADD `deleted` TINYINT(1) NOT NULL DEFAULT '0' AFTER `verified`
